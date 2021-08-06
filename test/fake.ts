@@ -26,7 +26,7 @@ tape('[FakeTransaction]: Basic functions', function(t) {
     const tx = new FakeTransaction(txData, { chain: 'mainnet', hardfork: 'homestead' })
     const hash = tx.hash()
     const cmpHash = Buffer.from(
-      'f74b039f6361c4351a99a7c6a10867369fe6701731d85dc07c15671ac1c1b648',
+      '285fe468652e1694af579a8d109547835ef9ebe36b13879dd48e824e0789de7f',
       'hex',
     )
     st.deepEqual(hash, cmpHash, 'should create hash with includeSignature=true (default)')
@@ -46,7 +46,7 @@ tape('[FakeTransaction]: Basic functions', function(t) {
     const tx = new FakeTransaction(txDataNoFrom)
     const hash = tx.hash()
     const cmpHash = Buffer.from(
-      '80a2ca70509414908881f718502e6bbb3bc67f416abdf972ea7c0888579be7b9',
+      '858707049acbcb723c07fc8c01f012afe13298dd9a0f65cb8b2dd06fed127f80',
       'hex',
     )
     st.deepEqual(hash, cmpHash, 'should create hash with includeSignature=true (default)')

@@ -41,7 +41,7 @@ tape('[Transaction]: Basic functions', function(t) {
     const tx = new Transaction(txFixtures[3].raw)
     st.deepEqual(
       tx.hash(),
-      new Buffer('375a8983c9fc56d7cfd118254a80a8d7403d590a6c9e105532b67aca1efb97aa', 'hex'),
+      new Buffer('ed2210c5bee4e2af382b622313754d5a0d4927a26fb8a82aef4f476d5a02e720', 'hex'),
     )
     st.deepEqual(
       tx.hash(false),
@@ -49,7 +49,7 @@ tape('[Transaction]: Basic functions', function(t) {
     )
     st.deepEqual(
       tx.hash(true),
-      new Buffer('375a8983c9fc56d7cfd118254a80a8d7403d590a6c9e105532b67aca1efb97aa', 'hex'),
+      new Buffer('ed2210c5bee4e2af382b622313754d5a0d4927a26fb8a82aef4f476d5a02e720', 'hex'),
     )
     st.end()
   })
@@ -58,11 +58,11 @@ tape('[Transaction]: Basic functions', function(t) {
     const tx = new Transaction(txFixtures[4].raw)
     st.equal(
       tx.hash().toString('hex'),
-      '0f09dc98ea85b7872f4409131a790b91e7540953992886fc268b7ba5c96820e4',
+      '3b7521aed86321b171cfb0f971a1ab04dc717d7e10376c0e808c29bdb99e2aa2',
     )
     st.equal(
       tx.hash(true).toString('hex'),
-      '0f09dc98ea85b7872f4409131a790b91e7540953992886fc268b7ba5c96820e4',
+      '3b7521aed86321b171cfb0f971a1ab04dc717d7e10376c0e808c29bdb99e2aa2',
     )
     st.equal(
       tx.hash(false).toString('hex'),
@@ -237,7 +237,7 @@ tape('[Transaction]: Basic functions', function(t) {
     // We don't have a getter for such a value in Transaction.
     st.equal(
       pt.serialize().toString('hex'),
-      'ec098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a764000080808080',
+      'ed098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a76400008080808080',
     )
     pt.sign(privateKey)
     st.equal(
@@ -246,7 +246,7 @@ tape('[Transaction]: Basic functions', function(t) {
     )
     st.equal(
       pt.serialize().toString('hex'),
-      'f86c098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a76400008025a028ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276a067cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d83',
+      'f86d098504a817c800825208943535353535353535353535353535353535353535880de0b6b3a76400008025a028ef61340bd939bc2195fe537567866003e1a15d3c71ff63e1590620aa636276a067cbe9d8997f761aecb703304b3800ccf555c9f3dc64214b297fb1966a3b6d8380',
     )
     st.end()
   })
@@ -271,7 +271,7 @@ tape('[Transaction]: Basic functions', function(t) {
       pt.sign(privateKey)
       st.equal(
         pt.serialize().toString('hex'),
-        'f86c018502540be40082520894d7250824390ec5c8b71d856b5de895e271170d9d880de0b6b3a76400008029a0d3512c68099d184ccf54f44d9d6905bff303128574b663dcf10b4c726ddd8133a0628acc8f481dea593f13309dfc5f0340f83fdd40cf9fbe47f782668f6f3aec74',
+        'f86d018502540be40082520894d7250824390ec5c8b71d856b5de895e271170d9d880de0b6b3a76400008029a0d3512c68099d184ccf54f44d9d6905bff303128574b663dcf10b4c726ddd8133a0628acc8f481dea593f13309dfc5f0340f83fdd40cf9fbe47f782668f6f3aec7480',
       )
       st.end()
     },

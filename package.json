@@ -1,5 +1,5 @@
 {
-  "name": "ethereumjs-tx",
+  "name": "@shardlabs/ethereumjs-tx",
   "version": "2.1.2",
   "description": "A simple module for creating, manipulating and signing Ethereum transactions",
   "main": "dist/index.js",
